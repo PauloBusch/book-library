@@ -10,7 +10,14 @@ builder.Services
     .AddSwaggerGen();
 
 builder.Services
-    .AddBookInfraModule(builder.Configuration);
+    .AddBookInfraModule(builder.Configuration)
+    .AddCors(setup =>
+        setup.AddPolicy("default", cors =>
+            cors.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+        )
+    );
 
 var app = builder.Build();
 
@@ -20,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("default");
 
 app.UseHttpsRedirection();
 
