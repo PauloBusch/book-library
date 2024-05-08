@@ -1,3 +1,5 @@
+import './book-list.css';
+
 function BookList({ books }) {
 
   const header = [

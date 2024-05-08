@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import './books.css';
 import { WEB_API } from "../consts";
 import BookList from "./book-list";
 import BookSearch from "./book-search";
@@ -19,10 +20,11 @@ function Books() {
   }, []);
 
   return (
-    <>
+    <div className="books">
+      <h1>Royal Library</h1>
       <BookSearch onChange={getBooks}/>
       <BookList books={books}/>
-    </>
+    </div>
   )
 }
 
