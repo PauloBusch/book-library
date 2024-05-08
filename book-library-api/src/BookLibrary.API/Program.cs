@@ -10,8 +10,7 @@ builder.Services
     .AddSwaggerGen();
 
 builder.Services
-    .AddBookInfraModule()
-    .AddBookInfraSettings(builder.Configuration);
+    .AddBookInfraModule(builder.Configuration);
 
 var app = builder.Build();
 
