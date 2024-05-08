@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BookLibrary.Domain\BookLibrary.Domain.csproj" />
     <ProjectReference Include="..\BookLibrary.Infra\BookLibrary.Infra.csproj" />
   </ItemGroup>
