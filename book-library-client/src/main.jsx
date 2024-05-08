@@ -6,6 +6,7 @@ import Books from './books/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <h2>Royal Library</h2>
     <Books />
   </React.StrictMode>,
 )

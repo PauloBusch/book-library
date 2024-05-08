@@ -14,7 +14,8 @@ namespace BookLibrary.Infra
             IConfiguration configuration
         )
         {
-            var connectionString = configuration.GetConnectionString("dbConnection1");
+            Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+            var connectionString = configuration.GetConnectionString("BookLibrary");
             services.AddTransient<IDbConnection>((sp) => new SqlConnection(connectionString));
 
             services.AddScoped<IBookRepository, BookRepository>();

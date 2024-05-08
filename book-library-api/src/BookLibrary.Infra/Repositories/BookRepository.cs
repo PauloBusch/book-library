@@ -19,8 +19,9 @@ namespace BookLibrary.Infra.Repositories
         {
             var sql = $@"
                 SELECT 
-                    title, first_name, last_name, type, isbn, category,
+                    book_id as id, title, first_name, last_name, type, isbn, category,
                     total_copies, copies_in_use
+                FROM books
                 WHERE 1=1
                 {(!string.IsNullOrWhiteSpace(search.Title) ? "AND title like '%' + @Title + '%'" : string.Empty)}
                 {(!string.IsNullOrWhiteSpace(search.Author) ? "AND (first_name like @Author + '%' OR last_name like @Author + '%')" : string.Empty)}
