@@ -9,20 +9,20 @@ import toQueryUrl from "../utils/to-query-url";
 function Books() {
   const [books, setBooks] = useState([]);
 
-  const getBooks = (query) => {
+  const handleSearch = (query) => {
     fetch(`${WEB_API}/books${toQueryUrl(query)}`)
       .then(response => response.json())
       .then(data => setBooks(data));
   }
 
   useEffect(() => {
-    getBooks();
+    handleSearch();
   }, []);
 
   return (
     <div className="books">
       <h1>Royal Library</h1>
-      <BookSearch onChange={getBooks}/>
+      <BookSearch onSearch={handleSearch}/>
       <BookList books={books}/>
     </div>
   )

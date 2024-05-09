@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import './book-search.css';
 
-function BookSearch({ onChange }) {
+function BookSearch({ onSearch }) {
   const [field, setField] = useState('title');
   const [value, setValue] = useState('');
 
@@ -21,7 +21,7 @@ function BookSearch({ onChange }) {
         <label htmlFor="search-value">Search Value:</label>
         <input id="search-value" onChange={ev => setValue(ev.target.value)}/>
       </div>
-      <button onClick={() => onChange({ [field]: value })}>Search</button>
+      <button onClick={() => onSearch({ [field]: value })}>Search</button>
     </fieldset>
   )
 }
