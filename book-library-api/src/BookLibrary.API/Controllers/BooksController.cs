@@ -1,6 +1,6 @@
 ﻿using BookLibrary.Domain.Entities;
-using BookLibrary.Domain.Repositories;
-using BookLibrary.Domain.Search;
+using BookLibrary.Domain.Interfaces.Repositories;
+using BookLibrary.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookLibrary.API.Controllers

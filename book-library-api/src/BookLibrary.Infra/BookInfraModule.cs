@@ -1,4 +1,4 @@
-﻿using BookLibrary.Domain.Repositories;
+﻿using BookLibrary.Domain.Interfaces.Repositories;
 using BookLibrary.Infra.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
