@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import './book-search.css';
 
-function BookSearch({ onSearch }) {
+function BookSearch({ onSearch, onExport }) {
   const [field, setField] = useState('title');
   const [value, setValue] = useState('');
 
@@ -22,6 +22,7 @@ function BookSearch({ onSearch }) {
         <input id="search-value" onChange={ev => setValue(ev.target.value)}/>
       </div>
       <button onClick={() => onSearch({ [field]: value })}>Search</button>
+      <button onClick={() => onExport({ [field]: value })}>Export</button>
     </fieldset>
   )
 }
