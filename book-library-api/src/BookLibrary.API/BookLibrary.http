@@ -1,6 +1,7 @@
 @BookLibrary_HostAddress = https://localhost:44329/api
 
 GET {{BookLibrary_HostAddress}}/books
-Accept: application/json
 
 ###
+
+GET {{BookLibrary_HostAddress}}/books/report?category=Sci-Fi

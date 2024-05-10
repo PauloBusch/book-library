@@ -10,7 +10,10 @@ builder.Services
     .AddSwaggerGen();
 
 builder.Services
-    .AddBookInfraModule(builder.Configuration)
+    .AddBookInfraModule(
+        builder.Configuration,
+        registerConsumers: configurator => { }
+    )
     .AddCors(setup =>
         setup.AddPolicy("default", cors =>
             cors.AllowAnyOrigin()

@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Shared", "src\B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Reports", "src\BookLibrary.Reports\BookLibrary.Reports.csproj", "{BC46E8A3-BA52-4079-820C-1DA99AD503B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D6DBDA3D-A445-4A48-9F40-ACE6A70AAC53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driven", "Driven", "{7C72226B-2BA9-43CA-921D-95597569C435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driving", "Driving", "{BA33F620-AC7C-4E30-A586-B2E9FAC33065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +48,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B62575F-C9FD-47BA-9602-9DF5F7EBA242} = {BA33F620-AC7C-4E30-A586-B2E9FAC33065}
+		{8640D3CA-4907-4C7B-A38D-C0EC9A4C9662} = {7C72226B-2BA9-43CA-921D-95597569C435}
+		{3EEB5B0D-5A17-4EAE-93A8-9218967BB8A4} = {D6DBDA3D-A445-4A48-9F40-ACE6A70AAC53}
+		{D79CDED5-DCF7-474F-A5D9-0E1C5C503BB2} = {D6DBDA3D-A445-4A48-9F40-ACE6A70AAC53}
+		{BC46E8A3-BA52-4079-820C-1DA99AD503B2} = {BA33F620-AC7C-4E30-A586-B2E9FAC33065}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF460E1F-322F-4D9E-BD49-85393CF6AFDE}
