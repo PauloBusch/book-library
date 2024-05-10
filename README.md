@@ -45,8 +45,8 @@ You have to create the database with their respective tables. Get the script [`S
 In the `appsettings.json` for **BookLibrary.API** and **BookLibrary.Reports** projects you must have to fill these connection strings.
 ``` json
 "ConnectionStrings": {
-    "BookLibrary": "FROM_ENV",
-    "ServiceBus": "FROM_ENV"
+    "BookLibrary": "", // SQL Server
+    "ServiceBus": "" // Service Bus
 }
 ```
 
@@ -72,4 +72,4 @@ npm install
 npm run dev
 ```
 
-Then you can open the link [http://localhost:5173](http://localhost:5173) to access the app.
+Then you can open the link [http://localhost:3000](http://localhost:3000) to access the app.
