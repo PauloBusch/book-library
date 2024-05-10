@@ -1,4 +1,7 @@
-﻿using BookLibrary.Infra;
+﻿using BookLibrary.Domain.Abstractions.Services;
+using BookLibrary.Infra;
+using BookLibrary.Infra.Consumers;
+using BookLibrary.Reports;
 
 var configuration = null as IConfiguration;
 var builder = Host.CreateDefaultBuilder(args)
@@ -14,8 +17,12 @@ var builder = Host.CreateDefaultBuilder(args)
     {
         services.AddBookInfraModule(
             configuration,
-            registerConsumers: configurator => { }
+            registerConsumers: configurator =>
+            {
+                configurator.AddConsumer<GenerateReportConsumer>();
+            }
         );
+        services.AddScoped<IReportService, ReportService>();
     })
     .ConfigureLogging(logger =>
     {

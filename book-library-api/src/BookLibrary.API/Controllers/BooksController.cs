@@ -28,7 +28,7 @@ namespace BookLibrary.API.Controllers
             => _bookRepository.GetAllAsync(search);
 
         [HttpGet("report")]
-        public Task SearchAsync([FromQuery] BookReportMessage message)
+        public Task EnqueueReportAsync([FromQuery] BookReportMessage message)
             => _generateReportPublisher.GenerateBookReportAsync(message);
     }
 }

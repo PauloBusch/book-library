@@ -54,7 +54,9 @@ namespace BookLibrary.Infra
                 });
             });
 
-            services.AddScoped<IGenerateReportPublisher, GenerateReportPublisher>();
+            services
+                .AddScoped<IGenerateReportPublisher, GenerateReportPublisher>()
+                .AddScoped<IReportReadyPublisher, ReportReadyPublisher>();
 
             return services;
         }

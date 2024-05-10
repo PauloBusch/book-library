@@ -1,4 +1,5 @@
 using BookLibrary.Infra;
+using BookLibrary.Infra.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,9 @@ builder.Services
 builder.Services
     .AddBookInfraModule(
         builder.Configuration,
-        registerConsumers: configurator => { }
+        registerConsumers: configurator => {
+            configurator.AddConsumer<ReportReadyConsumer>();
+        }
     )
     .AddCors(setup =>
         setup.AddPolicy("default", cors =>
