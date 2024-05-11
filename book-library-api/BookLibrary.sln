@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Infra", "src\Bo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Domain", "src\BookLibrary.Domain\BookLibrary.Domain.csproj", "{3EEB5B0D-5A17-4EAE-93A8-9218967BB8A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Shared", "src\BookLibrary.Shared\BookLibrary.Shared.csproj", "{D79CDED5-DCF7-474F-A5D9-0E1C5C503BB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Shared", "src\BookLibrary.Shared\BookLibrary.Shared.csproj", "{D79CDED5-DCF7-474F-A5D9-0E1C5C503BB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Reports", "src\BookLibrary.Reports\BookLibrary.Reports.csproj", "{BC46E8A3-BA52-4079-820C-1DA99AD503B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Reports", "src\BookLibrary.Reports\BookLibrary.Reports.csproj", "{BC46E8A3-BA52-4079-820C-1DA99AD503B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D6DBDA3D-A445-4A48-9F40-ACE6A70AAC53}"
 EndProject

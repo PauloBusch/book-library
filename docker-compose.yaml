@@ -1,7 +1,32 @@
 version: "3.8"
 services:
+  api:
+    image: ${DOCKER_REGISTRY-}booklibraryapi
+    depends_on:
+      - sql-server
+    build:
+      context: .
+      dockerfile: book-library-api/src/BookLibrary.API/Dockerfile
+
   client:
     build: ./book-library-client
     container_name: book-library-client
     ports:
       - '3000:3000'
+
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: "SqlServer2022!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  mssql-tools:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - sql-server
+    volumes:
+      - ./mssql-tools-commands.sh:/tmp/mssql-tools-commands.sh
+      - ./book-library-api/src/BookLibrary.Infra/Scripts:/tmp/Scripts
+    command: /bin/bash ./tmp/mssql-tools-commands.sh
