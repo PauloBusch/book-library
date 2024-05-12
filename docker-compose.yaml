@@ -4,15 +4,25 @@ services:
     build:
       context: .
       dockerfile: book-library-api/src/BookLibrary.API/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - "ConnectionStrings:BookLibrary=Server=sql-server;Initial Catalog=book-library;User ID=sa;Password=SqlServer2022!;"
-      - "ConnectionStrings:RabbitMQ=amqp://rabbitmq:RabbitMQ3!@rabbitmq:5672/docker"
+    extends:
+      file: docker-compose.settings.yaml
+      service: appsettings
     depends_on:
       - sql-server
       - rabbitmq
     ports:
       - 5262:8080
+
+  reports:
+    build:
+      context: .
+      dockerfile: book-library-api/src/BookLibrary.Reports/Dockerfile
+    extends:
+      file: docker-compose.settings.yaml
+      service: appsettings
+    depends_on:
+      - sql-server
+      - rabbitmq
 
   client:
     build: ./book-library-client

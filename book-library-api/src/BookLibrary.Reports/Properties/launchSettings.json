@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BookLibrary.Reports": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

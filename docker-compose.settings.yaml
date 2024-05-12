@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  appsettings:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:BookLibrary=Server=sql-server;Initial Catalog=book-library;User ID=sa;Password=SqlServer2022!;"
+      - "ConnectionStrings:RabbitMQ=amqp://rabbitmq:RabbitMQ3!@rabbitmq:5672/docker"
