@@ -25,7 +25,7 @@ To optimize the performance were created some indexes and applied pagination in 
  * **[Dapper](https://www.learndapper.com)**: Simplifies the data access from the database. 
  * **[MassTransit](https://masstransit.io)**: Facilitate working with RabbitMQ for Event-Driven.
 
-### Setup
+## Setup
 The first thing you need to do is clone the repository to get the code onto your computer. To do this, you can copy the command below and run it in the terminal.
 ``` bash
 git clone https://github.com/PauloBusch/book-library.git
@@ -37,7 +37,7 @@ There are two options for setup: [Docker Setup](#docker-setup) and [Manual Setup
 #### Requirements and Tools
 You need to have these following programs to start the services. Look at the **hardware requirements** for Docker if you would install.
  * [Docker](https://docs.docker.com/get-docker/): Provide the environment for containerization.
- * [Docker Compose](https://docs.docker.com/compose/install/): Tool to work manage containers.
+ * [Docker Compose](https://docs.docker.com/compose/install/): Tool to manage containers.
 
 Make sure the [Docker](https://docs.docker.com/) is running and execute the command bellow to start the containers.
 ``` bash
