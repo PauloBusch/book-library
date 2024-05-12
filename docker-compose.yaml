@@ -1,18 +1,34 @@
 version: "3.8"
 services:
   api:
-    image: ${DOCKER_REGISTRY-}booklibraryapi
-    depends_on:
-      - sql-server
     build:
       context: .
       dockerfile: book-library-api/src/BookLibrary.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:BookLibrary=Server=sql-server;Initial Catalog=book-library;User ID=sa;Password=SqlServer2022!;"
+      - "ConnectionStrings:RabbitMQ=amqp://rabbitmq:RabbitMQ3!@rabbitmq:5672/docker"
+    depends_on:
+      - sql-server
+      - rabbitmq
+    ports:
+      - 5262:8080
 
   client:
     build: ./book-library-client
     container_name: book-library-client
     ports:
-      - '3000:3000'
+      - 3000:3000
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=RabbitMQ3!
+      - RABBITMQ_DEFAULT_VHOST=docker
+    ports:
+      - 5672:5672
+      - 15672:15672
 
   sql-server:
     image: mcr.microsoft.com/mssql/server:2022-latest

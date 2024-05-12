@@ -43,11 +43,11 @@ namespace BookLibrary.Infra
             Action<IBusRegistrationConfigurator> registerConsumers
         )
         {
-            var connectionString = configuration.GetConnectionString("ServiceBus");
+            var connectionString = configuration.GetConnectionString("RabbitMQ");
             services.AddMassTransit(configurator =>
             {
                 registerConsumers(configurator);
-                configurator.UsingAzureServiceBus((context, cfg) =>
+                configurator.UsingRabbitMq((context, cfg) =>
                 {
                     cfg.Host(connectionString);
                     cfg.ConfigureEndpoints(context);

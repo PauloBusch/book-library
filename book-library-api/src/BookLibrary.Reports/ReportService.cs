@@ -1,7 +1,6 @@
 ﻿using BookLibrary.Domain.Abstractions.Publishers;
 using BookLibrary.Domain.Abstractions.Services;
 using BookLibrary.Shared.Messages;
-using System.Text.Json;
 
 namespace BookLibrary.Reports
 {
