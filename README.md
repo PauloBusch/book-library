@@ -6,7 +6,7 @@ This repository has a microservice solution that will be detailed in the section
 
 The application is simple as you can see in the diagram below, is composite by an API that queries data from the database and a UI interface for user actions. There is also a dedicated worker for report generation, where communicates with the API using a message broker RabbitMQ.
 
-![Architecture Diagram](diagrams/architecture-diagram.drawio.png)
+![Architecture Diagram](diagrams/architecture-diagram-1.drawio.png)
 
 ## WEB
 The user can interact with the application by a Web interface developed using React.js, the source code is available in the folder `book-library-client`.
@@ -52,10 +52,10 @@ The API documentation must be available in [http://localhost:5262/swagger/index.
 ### Manual Setup
 #### Requirements and Tools
 Before begin, you need to have some programs in your machine that will provide the environment to run the apps.
- * [.NET Core 8 SDK (.NET CLI)]((https://dotnet.microsoft.com/en-us/download/dotnet/8.0)): To runs the API.
+ * [.NET Core 8 SDK (.NET CLI)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0): To runs the API.
  * [Node.js ^16](https://nodejs.org/en/download): To runs the Web application.
  * [RabbitMQ](https://www.rabbitmq.com/docs/download): Message broker.
- * [SQL Server](#https://www.microsoft.com/en-us/sql-server/sql-server-downloads): Database provider.
+ * [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads): Database provider.
  * [Azure Data Studio](https://learn.microsoft.com/en-us/azure-data-studio/): Database client.
 
 #### Setup API
