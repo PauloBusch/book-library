@@ -1,1 +1,1 @@
-export const WEB_API = 'http://localhost:5262/api';
+export const API_HOST = import.meta.env.VITE_API_HOST;
