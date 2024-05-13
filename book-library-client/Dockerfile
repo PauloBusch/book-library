@@ -2,11 +2,11 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-COPY package.json .
+COPY book-library-client/package.json .
 
 RUN npm install
 
-COPY . .
+COPY book-library-client .
 
 EXPOSE 3000
 

@@ -25,7 +25,9 @@ services:
       - rabbitmq
 
   client:
-    build: ./book-library-client
+    build: 
+      context: .
+      dockerfile: book-library-client/Dockerfile
     container_name: book-library-client
     ports:
       - 3000:3000

@@ -10,10 +10,10 @@ resources:
 
 pool:
   vmImage: $(vmImageName)
-  
+
 extends:
   template: azure-pipelines-base.yml
   parameters:
-    imageRepository: 'react-client-image'
-    deploymentFileName: 'react-client-deployment.yaml'
-    dockerfilePath: '$(Build.SourcesDirectory)/book-library-client/Dockerfile'
+    imageRepository: 'netcore-api-image'
+    deploymentFileName: 'netcore-api-deployment.yaml'
+    dockerfilePath: '$(Build.SourcesDirectory)/book-library-api/src/BookLibrary.API/Dockerfile'

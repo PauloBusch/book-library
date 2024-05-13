@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netcore-reports
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netcore-reports
+  template:
+    metadata:
+      labels:
+        app: netcore-reports
+    spec:
+      containers:
+      - name: netcore-reports
+        image: booklibraryacr.azurecr.io/netcore-reports-image:$(Build.BuildId)
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "1"
+            memory: "2Gi"
