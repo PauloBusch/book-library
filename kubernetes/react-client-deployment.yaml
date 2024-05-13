@@ -20,6 +20,9 @@ spec:
           limits:
             cpu: "0.5"
             memory: "1Gi"
+        env:
+        - name: VITE_API_HOST
+          value: $(API_HOST)
         ports:
         - containerPort: 3000
 ---

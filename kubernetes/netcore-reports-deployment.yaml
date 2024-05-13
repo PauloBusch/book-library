@@ -20,3 +20,8 @@ spec:
           limits:
             cpu: "0.5"
             memory: "2Gi"
+        env:
+        - name: ConnectionStrings:BookLibrary
+          value: $(CONNECTION_STRINGS_SQL_SERVER)
+        - name: ConnectionStrings:RabbitMQ
+          value: $(CONNECTION_STRINGS_RABBITMQ)
