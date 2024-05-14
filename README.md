@@ -36,7 +36,7 @@ There are two options for setup: [Docker Setup](#docker-setup) and [Manual Setup
 ### Docker Setup
 #### Requirements and Tools
 You need to have these following programs to start the services. Look at the **hardware requirements** for Docker if you would install.
- * [Docker](https://docs.docker.com/get-docker/): Provide the environment for containerization.
+ * [Docker](https://docs.docker.com/get-docker/): Provides the environment for containerization.
  * [Docker Compose](https://docs.docker.com/compose/install/): Tool to manage containers.
 
 Make sure the [Docker](https://docs.docker.com/) is running and execute the command bellow to start the containers.
@@ -52,8 +52,8 @@ The API documentation must be available in [http://localhost:5262/swagger/index.
 ### Manual Setup
 #### Requirements and Tools
 Before begin, you need to have some programs in your machine that will provide the environment to run the apps.
- * [.NET Core 8 SDK (.NET CLI)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0): To runs the API.
- * [Node.js ^16](https://nodejs.org/en/download): To runs the Web application.
+ * [.NET Core 8 SDK (.NET CLI)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0): To run the API.
+ * [Node.js ^16](https://nodejs.org/en/download): To run the Web application.
  * [RabbitMQ](https://www.rabbitmq.com/docs/download): Message broker.
  * [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads): Database provider.
  * [Azure Data Studio](https://learn.microsoft.com/en-us/azure-data-studio/): Database client.

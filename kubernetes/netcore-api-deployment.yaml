@@ -21,9 +21,9 @@ spec:
             cpu: "0.5"
             memory: "1Gi"
         env:
-        - name: ConnectionStrings:BookLibrary
+        - name: ConnectionStrings__BookLibrary
           value: $(CONNECTION_STRINGS_SQL_SERVER)
-        - name: ConnectionStrings:RabbitMQ
+        - name: ConnectionStrings__RabbitMQ
           value: $(CONNECTION_STRINGS_RABBITMQ)
 ---
 apiVersion: v1
